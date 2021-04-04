@@ -8,7 +8,7 @@ class Search extends Component {
     query: '',
     results: []
   }
-
+// Fetching the info using the api
   getInfo = () => {
     axios.get(API_URL +'?q='+ this.state.query).then(resp => {
       console.log(resp);
@@ -17,7 +17,7 @@ class Search extends Component {
         })
     });
   }
-
+  //triggering the search on change
   handleInputChange = () => {
     this.setState({
       query: this.search.value
@@ -27,7 +27,7 @@ class Search extends Component {
         }
     })
   }
-
+// rendering the form and results
   render() {
     return (
       <form className="text-left">
